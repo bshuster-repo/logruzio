@@ -42,7 +42,7 @@ func New(token string, appName string, ctx logrus.Fields) (*Hook, error) {
 	opts.Context["token"] = token
 	opts.Context["type"] = appName
 	opts.Context["meta"] = ctx
-	opts.Formatter = &logrus.JSONFormatter{}
+	opts.Formatter = &SimpleFormatter{}
 
 	var conn io.Writer
 	var err error
