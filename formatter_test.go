@@ -23,7 +23,7 @@ func TestSimpleFormatterFormat(t *testing.T) {
 	if err != nil {
 		t.Errorf("%s expected not to fail: %s", name, err)
 	}
-	if expected := "{\"level\":\"panic\",\"message\":\"\",\"time\":\"0001-01-01T00:00:00Z\",\"user\":\"bla\"}\n"; string(data) != expected {
+	if expected := "{\"level\":0,\"message\":\"\",\"time\":\"0001-01-01T00:00:00Z\",\"user\":\"bla\"}\n"; string(data) != expected {
 		t.Errorf("%s expected data to be %s but got %s", name, expected, string(data))
 	}
 }
