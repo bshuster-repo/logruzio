@@ -14,7 +14,7 @@ Send Logrus logs to Logzio
 package yourpackagename
 
 import (
-        "github.com/Sirupsen/logrus"
+        "github.com/sirupsen/logrus"
         "github.com/bshuster-repo/logruzio"
 )
 

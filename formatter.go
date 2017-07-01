@@ -3,7 +3,7 @@ package logruzio
 import (
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 // SimpleFormatter represents a simple JSON formatter
