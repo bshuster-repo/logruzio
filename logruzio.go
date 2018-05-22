@@ -71,6 +71,9 @@ func (h *Hook) Fire(entry *logrus.Entry) error {
 	}
 
 	if _, err = h.hookOpts.Conn.Write(dataBytes); err != nil {
+        // Recreate a new connection for new elements . This element is lost (at most one semantic)
+        h.hookOpts.Conn.Close()
+        h.hookOpts.Conn = net.Dial(proto, endpoint)
 		return err
 	}
 
